@@ -1,4 +1,4 @@
-var numbers = [3, 56, 2, 48, 5];
+//var numbers = [3, 56, 2, 48, 5];
 
 //****** */Map -Create a new array by doing something with each item in an array.
 //****** */does basicly the same as a foreach loop without the hustle of creating an empy array and pushis stuff into it for each itteration
@@ -36,7 +36,17 @@ var numbers = [3, 56, 2, 48, 5];
 
 //****** */FindIndex - find the index of the first item that matches.
 
-const newNumber = numbers.findIndex(function (num) {
-  return num > 10;
+// const newNumber = numbers.findIndex(function (num) {
+//   return num > 10;
+// });
+// console.log(newNumber);
+
+import emojipedia from "./emojipedia";
+
+const description = emojipedia.map(function (x) {
+  const meaning = x.meaning.substring(0, 101);
+
+  return meaning;
 });
-console.log(newNumber);
+
+console.log(description);
